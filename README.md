@@ -1,46 +1,70 @@
-A/ Règles du jeu :
+# Getting Started with Create React App
 
-- 2 joueurs s'affrontent dans un duel à mort à l'aide d'un pistolet.
-- Il y a une balle dans le barillet sur 6 emplacements.
-- à chaque tour, un joueur se tire dessus, s'il n'y a pas de balle, c'est au tour de l'autre joueur de faire de même. S'il y a une balle, le joueur meurt et la partie est finie.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-B/ Fonctionnalités de l'App :
+In the project directory, you can run:
 
- B-i/ Déroulement d'une partie
+### `npm start`
 
-    1) Chaque joueur choisit un personnage à incarner parmi une sélection.
-    
-    2) Le premier tireur est choisi au hasard.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-    3) Celui qui est désigné, charge la balle dans le barillet et le fait tourner, cela déterminera sa place dans celui-ci pour la suite des tirs (Il y a 6 places dans le barillet).
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-    4) Il vise sa tempe et appuie sur la gâchette:
-        - Si la balle part, le joueur meurt et la partie est finie.
-        - Si le tir ne se déclenche pas, le prochain tireur sera l'autre joueur.
+### `npm test`
 
-    5) Entre 2 tirs, n'importe quel joueur peut abandonner la partie.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    6) Après le 5ème tir, s'il n'y a eu aucun tir réel, on recommence à l'étape 1.
+### `npm run build`
 
-    7) La partie se termine sur l'abandon ou la mort d'un joueur.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    8) Le score est le nombre de tours écoulés.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-C/ état final minimum souhaité
+### `npm run eject`
 
-  C-i/ Fonctionnalités minimum :
-    - Choix du personnage
-    - Choix du tireur
-    - Tir aléatoire
-    - Fin de partie (abandon ou mort d'un joueur)
-    - Recommencer la boucle au bout de 5 tirs infructueux
-    - Animations (tir, mort, échappatoire, choix du 1er tireur, fin de partie)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-  C-ii/ Fonctionnalités bonus
-    - Plus de 2 joueurs
-    - Bonus dans les tirs (exemple : une balle supplémentaire)
-    - Esquive possible des tirs réels (animation tir dure +/- longtemps et plage pour réagir au moment du tir)
-    - Animations supplémentaires
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
