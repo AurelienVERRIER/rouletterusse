@@ -9,11 +9,11 @@ B/ Fonctionnalités de l'App :
 
  B-i/ Déroulement d'une partie
 
-    1) Chaque joueur choisit un personnage à incarner parmis une sélection.
+    1) Chaque joueur choisit un personnage à incarner parmi une sélection.
     
     2) Le premier tireur est choisi au hasard.
 
-    3) Celui qui est désigné, charge la balle dans le barillet et cela déterminera sa place dans celui-ci pour la suite des tirs (Il y a 6 places dans le barillet).
+    3) Celui qui est désigné, charge la balle dans le barillet et le fait tourner, cela déterminera sa place dans celui-ci pour la suite des tirs (Il y a 6 places dans le barillet).
 
     4) Il vise sa tempe et appuie sur la gâchette:
         - Si la balle part, le joueur meurt et la partie est finie.
