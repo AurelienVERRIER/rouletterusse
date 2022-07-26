@@ -14,8 +14,8 @@ class App extends Component {
   handleRulesClick = () => {
     this.setState({display: "rules"})
   }
-  
 
+    
   render() {
   return (
 
