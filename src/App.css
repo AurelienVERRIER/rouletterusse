@@ -59,3 +59,7 @@ button:hover {
 .gameRules {
   background-color: beige;
 }
+
+.dead {
+  font-family: 'Bungee Shade', cursive;
+}
