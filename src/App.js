@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import Rules from "./components/Rules"
 
-function App() {
+
+class App extends Component {
+  constructor() {
+    super()
+  
+    this.state = {
+      display: "noRules",
+    }
+  }
+  handleRulesClick = () => {
+    this.setState({display: "rules"})
+  }
+  
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <h1 className='title'>Roulette Russe</h1>
+      <button className="text-decoration-none text-black-50" onClick={this.handleRulesClick}>Règles du jeu</button>
+      <article>
+      {this.state.display === "noRules" ?
+      <h2></h2>
+      :
+        <Rules/>
+      }
+      </article>
     </div>
   );
 }
 
+}
 export default App;
