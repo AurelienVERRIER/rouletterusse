@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import Rules from "./components/Rules"
+import GameOver from './components/GameOver';
 
 
 class App extends Component {
