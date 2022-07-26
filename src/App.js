@@ -2,12 +2,13 @@ import './App.css';
 import React, { Component } from 'react';
 import Rules from "./components/Rules";
 import Players from "./components/Players";
-
+import Homepage from "./components/Homepage";
+import GameOver from "./components/GameOver";
 
 class App extends Component {
   constructor() {
-    super()
-  
+    super();
+
     this.state = {
       display: "noRules",
       play: false,
@@ -17,6 +18,10 @@ class App extends Component {
   handleRulesClick = () => {
     this.setState({display: "rules"})
   }
+
+  handleRulesClose = () => {
+    this.setState({ display: "noRules" });
+  };
 
   handlePlayClick = () => {
     this.setState({play: true})
@@ -30,10 +35,22 @@ class App extends Component {
   return (
 
     <div>
-      
-      <h1 className='title'>Roulette Russe</h1>
-      <button className="text-decoration-none text-black-50" onClick={this.handlePlayClick}>Jouer</button>
-      <button className="text-decoration-none text-black-50" onClick={this.handleRulesClick}>Règles du jeu</button>
+
+      <div>
+        <Homepage />
+        <div className="rules">
+          <button className="" onClick={this.handleRulesClick}>
+            Règles du jeu
+          </button>
+          <article>
+            {this.state.display === "noRules" ? (
+              <h2></h2>
+            ) : (
+              <Rules handleRulesClose={() => this.handleRulesClose()} />
+            )}
+          </article>
+        </div>
+      </div>
       
 
       {this.state.play ?
@@ -46,19 +63,11 @@ class App extends Component {
       }
 
 
- 
-      {this.state.display === "noRules" ?
-      <article>
-        <p>Cliquez sur "Jouer" pour lancer une partie</p>
-        <p>Cliquez sur "Règles du jeu" pour avoir le détail des règles</p>
-      </article>
-      :
-        <Rules/>
-      }
-
     </div>
   );
 }
 
-}
+    };
+  
+
 export default App;
