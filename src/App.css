@@ -1,16 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+/* font-family: 'Courier Prime', monospace; */
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+/* font-family: 'Bungee Shade', cursive; */
+
 body {
-  background-color: #041933;
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Homepage */
+h1 {
   color: white;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
 }
 
 button {
   color: white;
   border: none;
   background-color: #041933;
+  font-size: 35px;
+  font-family: "Courier Prime", monospace;
 }
 
-.choice {
+button:hover {
+  text-decoration: underline;
+}
+
+.choices {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-right: 40px;
+  gap: 20px;
+}
+
+/* rules */
+.rules {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-top: 200px;
+}
+
+.rules button {
+  color: white;
+  border: none;
+  background-color: #041933;
+  font-size: 35px;
+}
+
+.gameRules {
+  background-color: beige;
 }

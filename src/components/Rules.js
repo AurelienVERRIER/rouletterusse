@@ -3,7 +3,7 @@ import React from "react";
 class Rules extends React.Component {
   render() {
     return (
-      <div className="gameRules  mx-5 p-5 rounded-pill p-3 mb-2 bg-secondary text-white d-flex flex-column">
+      <div className="gameRules">
         <button
           type="button"
           className="btn-close text-end"

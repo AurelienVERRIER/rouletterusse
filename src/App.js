@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import Rules from "./components/Rules";
+import Homepage from "./components/Homepage";
 
 class App extends Component {
   constructor() {
@@ -21,19 +22,19 @@ class App extends Component {
     return (
       <div>
         <h1 className="title">Roulette Russe</h1>
-        <button
-          className="btn btn-outline-secondary"
-          onClick={this.handleRulesClick}
-        >
-          Règles du jeu
-        </button>
-        <article>
-          {this.state.display === "noRules" ? (
-            <h2></h2>
-          ) : (
-            <Rules handleRulesClose={() => this.handleRulesClose()} />
-          )}
-        </article>
+        <Homepage />
+        <div className="rules">
+          <button className="" onClick={this.handleRulesClick}>
+            Règles du jeu
+          </button>
+          <article>
+            {this.state.display === "noRules" ? (
+              <h2></h2>
+            ) : (
+              <Rules handleRulesClose={() => this.handleRulesClose()} />
+            )}
+          </article>
+        </div>
       </div>
     );
   }
