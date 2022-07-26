@@ -14,19 +14,23 @@ class App extends Component {
   handleRulesClick = () => {
     this.setState({display: "rules"})
   }
-  
+  handleRulesClose = () => {
+    this.setState({display: "noRules"})
+  }
 
   render() {
   return (
 
     <div>
       <h1 className='title'>Roulette Russe</h1>
-      <button className="text-decoration-none text-black-50" onClick={this.handleRulesClick}>Règles du jeu</button>
+      <button className="btn btn-outline-secondary" onClick={this.handleRulesClick}>Règles du jeu</button>
       <article>
       {this.state.display === "noRules" ?
       <h2></h2>
       :
-        <Rules/>
+        <Rules
+        handleRulesClose={() => this.handleRulesClose()}
+        />
       }
       </article>
     </div>
