@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Rules from "./components/Rules";
 import Players from "./components/Players";
 import Homepage from "./components/Homepage";
+import Random from "./components/Random";
 import GameOver from "./components/GameOver";
 
 class App extends Component {
@@ -34,21 +35,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Roulette Russe</h1>
-          <Homepage />
-          <div className="rules">
-            <button className="" onClick={this.handleRulesClick}>
-              Règles du jeu
-            </button>
-            <article>
-              {this.state.display === "noRules" ? (
-                <h2></h2>
-              ) : (
-                <Rules handleRulesClose={() => this.handleRulesClose()} />
-              )}
-            </article>
-          </div>
+        <h1>Roulette Russe</h1>
+        <Homepage />
+        <div className="rules">
+          <button className="" onClick={this.handleRulesClick}>
+            Règles du jeu
+          </button>
+          <article>
+            {this.state.display === "noRules" ? (
+              <h2></h2>
+            ) : (
+              <Rules handleRulesClose={() => this.handleRulesClose()} />
+            )}
+          </article>
         </div>
 
         {this.state.play ? (
@@ -58,6 +57,8 @@ class App extends Component {
         ) : (
           <p></p>
         )}
+
+        <Random />
       </div>
     );
   }
