@@ -1,6 +1,6 @@
 import React from 'react';
-import bowser from '../img/bowser.jpg';
 import barbenoire from '../img/barbenoire.jpg';
+import bowser from '../img/bowser.jpg';
 import bender from '../img/bender.jpg';
 import corona from '../img/corona.jpg';
 import kim from '../img/kim.jpg';
@@ -19,7 +19,7 @@ class Players extends React.Component {
         {name: "Bender", image:bender},
         {name: "Barbe Noire", image:barbenoire},
         {name: "Corona Virus", image:corona},
-        {name: "Kim Jun Un", image:kim},
+        {name: "Kim Jon Un", image:kim},
         {name: "Papa Noël", image:papanoel},
         {name: "Vladimir Poutine", image:poutine},
         {name: "Ronald Mac Donald's", image:ronald},
@@ -46,7 +46,7 @@ class Players extends React.Component {
               <div className='col-2'>
 
                 
-                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.handleCharacterChosen}/>
+                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.state.opponents}/>
 
                 <h2 className='text-center'>{opponent.name}</h2>
                 

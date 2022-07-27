@@ -36,6 +36,7 @@ class App extends React.Component {
   // }
 
   handleOpponentClick = () => {
+    this.setState({play: "noPlay"})
     this.setState({opponent: "opponent"})
   }
 
@@ -64,8 +65,10 @@ class App extends React.Component {
         </>
         ) : (
         
-        <Players/>
-
+        <Players
+          handleHomePage={() => this.handleHomePage()}
+          handleOpponentClick={() => this.handleOpponentClick()}
+          />
         // <>
         //   <article>
         //     <Players 
