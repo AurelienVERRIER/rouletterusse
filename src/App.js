@@ -4,15 +4,21 @@ import Rules from './components/Rules'
 import Players from './components/Players'
 import Homepage from './components/Homepage'
 import GameOver from './components/GameOver'
+import Fight from './components/Fight'
 
 class App extends React.Component {
   constructor() {
     super()
 
+    const max = 6
+    const min = 1
+
     this.state = {
       display: 'noRules',
       step: 'home',
       opponent: 'noOpponent',
+      randomBullet: Math.floor(Math.random() * max) - min,
+      number: 1,
     }
   }
   handleRulesClick = () => {
@@ -25,66 +31,72 @@ class App extends React.Component {
 
   handleStepChange = (step) => {
     this.setState({ step: step })
-    // this.setState({opponent: "opponent"})
   }
 
-  // handleBallsClick = () => {
-  // }
-  // handleVersusClick = () => {
-  // }
+  handleOpponentClick = (opponent) => {
+    this.setState({ opponent: opponent, step: 'fight' })
+  }
 
-  handleOpponentClick = (name) => {
-    this.setState({ opponent: name, step: 'fight' })
+  handleShootClick = () => {
+    if (this.state.randomBullet !== this.state.number) {
+      this.state.randomBullet += 1
+      if (this.state.randomBullet === 6) {
+        this.state.randomBullet = 1
+      }
+      console.log(this.state.randomBullet, this.state.number)
+    } else {
+      console.log("t'es mort")
+      this.setState({ step: 'gameOver' })
+    }
   }
 
   render() {
     return (
       <div>
-        <div>
-          <h1>Roulette Russe</h1>
-
-          {this.state.step === 'home' && (
+        {this.state.step === 'home' && (
+          <article className="homePage">
+            <h1>Roulette Russe</h1>
             <Homepage
               handlePlayClick={() => this.handleStepChange('opponent')}
             />
-          )}
-          {this.state.step === 'opponent' && (
-            <Players
-              handleStepChange={this.handleStepChange}
-              handleOpponentClick={this.handleOpponentClick}
-            />
-          )}
-          {this.state.step === 'fight' && <h1>Mechant</h1>}
+            <div className="rules">
+              <button className="" onClick={this.handleRulesClick}>
+                Règles du jeu
+              </button>
 
-          <div className="rules">
-            <button className="" onClick={this.handleRulesClick}>
-              Règles du jeu
-            </button>
-
-            <article>
-              {this.state.display === 'noRules' ? (
-                <h2></h2>
-              ) : (
-                <Rules handleRulesClose={() => this.handleRulesClose()} />
-              )}
-            </article>
-          </div>
-        </div>
-
-        {/* 
-      <article>
-        {this.state.play === "Play" ? (
-        <>
-          <article>
-            <Homepage handlePlayClick={() => this.handlePlayClick()} />
+              <article>
+                {this.state.display === 'noRules' ? (
+                  <h2></h2>
+                ) : (
+                  <Rules handleRulesClose={() => this.handleRulesClose()} />
+                )}
+              </article>
+            </div>
           </article>
-        </>
-        ) : (
-        <>
-          <p>Test un deux</p>
-        </>
         )}
-      </article> */}
+
+        {this.state.step === 'opponent' && (
+          <Players
+            handleStepChange={this.handleStepChange}
+            handleOpponentClick={this.handleOpponentClick}
+          />
+        )}
+        {this.state.step === 'fight' && (
+          <div>
+            <Fight opponent={this.state.opponent} />
+            <button
+              className="shoot"
+              onClick={() => this.handleShootClick(this.state.randomBullet)}
+            >
+              Tirer !
+            </button>
+          </div>
+        )}
+        {this.state.step === 'gameOver' && (
+          <div>
+            <GameOver />
+          </div>
+        )}
       </div>
     )
   }
