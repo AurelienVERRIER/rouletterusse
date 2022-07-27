@@ -1,33 +1,33 @@
-import './App.css';
-import React, { Component } from 'react';
-import Rules from "./components/Rules";
-import Players from "./components/Players";
-import Homepage from "./components/Homepage";
-import GameOver from "./components/GameOver";
+import './App.css'
+import React, { Component } from 'react'
+import Rules from './components/Rules'
+import Players from './components/Players'
+import Homepage from './components/Homepage'
+import GameOver from './components/GameOver'
 
 class App extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
-      display: "noRules",
-      play: "noPlay",
-      opponent: "noOpponent",
+      display: 'noRules',
+      play: 'noPlay',
+      opponent: 'noOpponent',
     }
   }
   handleRulesClick = () => {
-    this.setState({display: "rules"})
+    this.setState({ display: 'rules' })
   }
   handleRulesClose = () => {
-    this.setState({ display: "noRules" })
+    this.setState({ display: 'noRules' })
   }
- 
+
   handlePlayClick = () => {
-    this.setState({play: "play"})
+    this.setState({ play: 'play' })
     // this.setState({opponent: "opponent"})
   }
   handleHomePage = () => {
-    this.setState({play: "noPlay"})
+    this.setState({ play: 'noPlay' })
   }
 
   // handleBallsClick = () => {
@@ -36,75 +36,57 @@ class App extends React.Component {
   // }
 
   handleOpponentClick = () => {
-    this.setState({play: "noPlay"})
-    this.setState({opponent: "opponent"})
+    this.setState({ opponent: 'opponent' })
   }
 
-  
-
   render() {
-  return (
-
-    <div>
-
+    return (
       <div>
-        <h1>Roulette Russe</h1>
+        <div>
+          <h1>Roulette Russe</h1>
 
-
-
-        <article>
-        {this.state.play === "noPlay" ? (
-        <>
           <article>
-            <Homepage
-              handlePlayClick={() => this.handlePlayClick()} />
-              {/* handleBallsClick={() => this.handleBallsClick()}
+            {this.state.play === 'noPlay' ? (
+              <>
+                <article>
+                  <Homepage handlePlayClick={() => this.handlePlayClick()} />
+                  {/* handleBallsClick={() => this.handleBallsClick()}
               handleVersusClick={() => this.handleVersusClick()} */}
-              {/* /> */}
-          </article>
-        </>
-        ) : (
-        
-        <Players
-          handleHomePage={() => this.handleHomePage()}
-          handleOpponentClick={() => this.handleOpponentClick()}
-          />
-        // <>
-        //   <article>
-        //     <Players 
-        //     handleHomePage={() => this.handleHomePage()}
-        //     handleOpponentClick={() => this.handleOpponentClick()}
-        //     />
-        //   </article>
-        // </>
-        )}
-      </article>
+                  {/* /> */}
+                </article>
+              </>
+            ) : (
+              <Players />
 
-
-
-        {/* <Homepage /> */}
-
-
-        <div className="rules">
-
-          <button className="" onClick={this.handleRulesClick}>
-            Règles du jeu
-          </button>
-          
-          <article>
-            {this.state.display === "noRules" ? (
-            
-            <h2></h2>
-          
-              ) : (
-            
-            <Rules handleRulesClose={() => this.handleRulesClose()} />
+              // <>
+              //   <article>
+              //     <Players
+              //     handleHomePage={() => this.handleHomePage()}
+              //     handleOpponentClick={() => this.handleOpponentClick()}
+              //     />
+              //   </article>
+              // </>
             )}
           </article>
+
+          {/* <Homepage /> */}
+
+          <div className="rules">
+            <button className="" onClick={this.handleRulesClick}>
+              Règles du jeu
+            </button>
+
+            <article>
+              {this.state.display === 'noRules' ? (
+                <h2></h2>
+              ) : (
+                <Rules handleRulesClose={() => this.handleRulesClose()} />
+              )}
+            </article>
+          </div>
         </div>
-      </div>
-      
-{/* 
+
+        {/* 
       <article>
         {this.state.play === "Play" ? (
         <>
@@ -118,12 +100,9 @@ class App extends React.Component {
         </>
         )}
       </article> */}
-
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
-};
-  
-
-export default App;
+export default App
