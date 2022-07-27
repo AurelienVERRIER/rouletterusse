@@ -37,6 +37,7 @@ class App extends Component {
     <div>
 
       <div>
+        <h1>Roulette Russe</h1>
         <Homepage />
         <div className="rules">
           <button className="" onClick={this.handleRulesClick}>
