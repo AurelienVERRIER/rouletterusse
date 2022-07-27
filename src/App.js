@@ -3,61 +3,89 @@ import React, { Component } from "react";
 import Rules from "./components/Rules";
 import Players from "./components/Players";
 import Homepage from "./components/Homepage";
-import Random from "./components/Random";
 import GameOver from "./components/GameOver";
+import Random from "./components/Random";
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
       display: "noRules",
-      play: false,
-      opponent: false,
+      play: "noPlay",
+      opponent: "noOpponent",
     };
   }
   handleRulesClick = () => {
     this.setState({ display: "rules" });
   };
-
   handleRulesClose = () => {
     this.setState({ display: "noRules" });
   };
 
   handlePlayClick = () => {
-    this.setState({ play: true });
+    this.setState({ play: "play" });
+    // this.setState({opponent: "opponent"})
+  };
+  handleHomePage = () => {
+    this.setState({ play: "noPlay" });
   };
 
+  // handleBallsClick = () => {
+  // }
+  // handleVersusClick = () => {
+  // }
+
   handleOpponentClick = () => {
-    this.setState({ opponent: true });
+    this.setState({ opponent: "opponent" });
   };
 
   render() {
     return (
       <div>
-        <h1>Roulette Russe</h1>
-        <Homepage />
-        <div className="rules">
-          <button className="" onClick={this.handleRulesClick}>
-            Règles du jeu
-          </button>
+        <div>
+          <h1>Roulette Russe</h1>
+
           <article>
-            {this.state.display === "noRules" ? (
-              <h2></h2>
+            {this.state.play === "noPlay" ? (
+              <>
+                <article>
+                  <Homepage handlePlayClick={() => this.handlePlayClick()} />
+                  {/* handleBallsClick={() => this.handleBallsClick()}
+              handleVersusClick={() => this.handleVersusClick()} */}
+                  {/* /> */}
+                </article>
+              </>
             ) : (
-              <Rules handleRulesClose={() => this.handleRulesClose()} />
+              <Players />
+
+              // <>
+              //   <article>
+              //     <Players
+              //     handleHomePage={() => this.handleHomePage()}
+              //     handleOpponentClick={() => this.handleOpponentClick()}
+              //     />
+              //   </article>
+              // </>
             )}
           </article>
+
+          {/* <Homepage /> */}
+
+          <div className="rules">
+            <button className="" onClick={this.handleRulesClick}>
+              Règles du jeu
+            </button>
+
+            <article>
+              {this.state.display === "noRules" ? (
+                <h2></h2>
+              ) : (
+                <Rules handleRulesClose={() => this.handleRulesClose()} />
+              )}
+            </article>
+          </div>
         </div>
-
-        {this.state.play ? (
-          <article>
-            <Players />
-          </article>
-        ) : (
-          <p></p>
-        )}
-
         <Random />
       </div>
     );

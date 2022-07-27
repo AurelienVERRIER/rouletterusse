@@ -17,6 +17,9 @@ class Random extends React.Component {
     let randomPlayerBullet = Math.floor(Math.random() * max) - min;
     let randomBulletCheck = Math.floor(Math.random() * max) - min;
 
+    if (randomBulletCheck === randomPlayerBullet) {
+      console.log("T'es mort");
+    }
     console.log(randomBulletCheck, randomPlayerBullet);
   };
 
