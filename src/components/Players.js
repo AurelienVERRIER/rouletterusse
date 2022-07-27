@@ -49,7 +49,7 @@ class Players extends React.Component {
                 className="img-fluid mx-20"
                 src={opponent.image}
                 alt="Opponent picture"
-                onClick={() => this.props.handleOpponentClick(opponent.name)}
+                onClick={() => this.props.handleOpponentClick(opponent)}
               />
 
               <h2 className="text-center">{opponent.name}</h2>

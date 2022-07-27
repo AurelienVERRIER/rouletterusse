@@ -3,10 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 /* font-family: 'Bungee Shade', cursive; */
 
-body {
+.homePage {
   background-image: url(../images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 /* Homepage */
@@ -77,4 +78,11 @@ button:hover {
   width:all;
   height: all;
   background-color: rgb(230, 221, 221);
+}
+
+.fightPage {
+  background-image: url(../images/fight-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
