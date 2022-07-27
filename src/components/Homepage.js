@@ -5,7 +5,13 @@ class Homepage extends React.Component {
     return (
       <div>
         <ul className="choices">
-          <button>Jouer</button>
+          <button
+            type="button"
+            className="btn-close text-end"
+            aria-label="Close"
+            onClick={this.props.handleRulesClose}
+            >Jouer
+          </button>
           <button>Balles</button>
           <button>Joueurs</button>
         </ul>

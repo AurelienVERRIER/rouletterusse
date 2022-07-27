@@ -29,7 +29,9 @@ handlePseudo = (e) => {
                     </input>
 	                <button 
                         type="submit"
-                        className="buttonSubmit">Valider
+                        className="buttonSubmit"
+                        onClick={this.props.handleLetsGoClick}
+                        >Valider
                     </button>
                 </form>
   
