@@ -1,35 +1,34 @@
-import "./App.css";
-import React, { Component } from "react";
-import Rules from "./components/Rules";
-import Players from "./components/Players";
-import Homepage from "./components/Homepage";
-import GameOver from "./components/GameOver";
-import Random from "./components/Random";
+import './App.css'
+import React, { Component } from 'react'
+import Rules from './components/Rules'
+import Players from './components/Players'
+import Homepage from './components/Homepage'
+import GameOver from './components/GameOver'
 
 class App extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
-      display: "noRules",
-      play: "noPlay",
-      opponent: "noOpponent",
-    };
+      display: 'noRules',
+      play: 'noPlay',
+      opponent: 'noOpponent',
+    }
   }
   handleRulesClick = () => {
-    this.setState({ display: "rules" });
-  };
+    this.setState({ display: 'rules' })
+  }
   handleRulesClose = () => {
-    this.setState({ display: "noRules" });
-  };
+    this.setState({ display: 'noRules' })
+  }
 
   handlePlayClick = () => {
-    this.setState({ play: "play" });
+    this.setState({ play: 'play' })
     // this.setState({opponent: "opponent"})
-  };
+  }
   handleHomePage = () => {
-    this.setState({ play: "noPlay" });
-  };
+    this.setState({ play: 'noPlay' })
+  }
 
   // handleBallsClick = () => {
   // }
@@ -37,8 +36,8 @@ class App extends React.Component {
   // }
 
   handleOpponentClick = () => {
-    this.setState({ opponent: "opponent" });
-  };
+    this.setState({ opponent: 'opponent' })
+  }
 
   render() {
     return (
@@ -47,7 +46,7 @@ class App extends React.Component {
           <h1>Roulette Russe</h1>
 
           <article>
-            {this.state.play === "noPlay" ? (
+            {this.state.play === 'noPlay' ? (
               <>
                 <article>
                   <Homepage handlePlayClick={() => this.handlePlayClick()} />
@@ -78,7 +77,7 @@ class App extends React.Component {
             </button>
 
             <article>
-              {this.state.display === "noRules" ? (
+              {this.state.display === 'noRules' ? (
                 <h2></h2>
               ) : (
                 <Rules handleRulesClose={() => this.handleRulesClose()} />
@@ -86,10 +85,24 @@ class App extends React.Component {
             </article>
           </div>
         </div>
-        <Random />
+
+        {/* 
+      <article>
+        {this.state.play === "Play" ? (
+        <>
+          <article>
+            <Homepage handlePlayClick={() => this.handlePlayClick()} />
+          </article>
+        </>
+        ) : (
+        <>
+          <p>Test un deux</p>
+        </>
+        )}
+      </article> */}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
