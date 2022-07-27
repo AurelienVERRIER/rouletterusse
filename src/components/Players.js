@@ -29,27 +29,35 @@ class Players extends React.Component {
     }
   }
 
+  handleCharacterChosen = () => {
+    <p1>Test</p1>
+  }
+
 	render() {
 		return(
-      <div className="gameRules  mx-5 p-5 rounded-pill p-3 mb-2 bg-secondary text-white flex">
-
-        <button type="button" class="btn-return" aria-label="Return">Retour</button>
-
-       
-       <section className='player-select'>
-        {this.state.opponents.map(opponent => (
-          <>
-            <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" />
-            <h2 className='text-center'>{opponent.name}</h2>
-          </>
-        ))}
-       </section>
+      <div className='opponentSelection'>
       
-        
-        <h4 className='text-center'>Choix de votre adversaire</h4> 
-        <p className="text-center">Choississez l'adversaire que vous souhaiez affronter. Ne vous trompez pas, un seul d'entre vous deux ressortira vainqueur!</p>
+        <div>
+          <button onClick={this.props.handleHomePage}>Retour</button>
+        </div> 
 
-        
+        <div className='row'>
+           {this.state.opponents.map((opponent) => (
+              <div className='col-2'>
+
+                
+                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.handleCharacterChosen}/>
+
+                <h2 className='text-center'>{opponent.name}</h2>
+                
+              </div>
+            ))}
+        </div>
+      
+        <div>
+          <h4 className='text-center'>Choix de votre adversaire</h4> 
+          <p className='text-center'>Choississez l'adversaire que vous souhaiez affronter. Ne vous trompez pas, un seul d'entre vous deux ressortira vainqueur!</p>
+        </div> 
 
       </div>
 		)
