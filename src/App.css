@@ -63,3 +63,18 @@ button:hover {
 .dead {
   font-family: 'Bungee Shade', cursive;
 }
+
+/* players */
+
+/* .playert-select{
+  display: flex;
+  flex-direction: row;
+  max-width: 30%;
+  min-width: 50%;
+} */
+
+.opponentSelection{
+  width:all;
+  height: all;
+  background-color: rgb(230, 221, 221);
+}
