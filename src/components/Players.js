@@ -29,39 +29,59 @@ class Players extends React.Component {
     }
   }
 
-  handleCharacterChosen = () => {
-    <p1>Test</p1>
-  }
+    onPickOpponents(opponents) {
+      this.setState({opponents})
+    }
+
+    getRandom6 = () => {
+      Math.floor(Math.random()*6);
+    }
+
+  // handleCharacterChosen = (e) => {
+  //   e.preventDefault();
+  //   console.log("Bowser ?")
+  // }
 
 	render() {
 		return(
       <div className='opponentSelection'>
       
         <div>
-          <button onClick={this.props.handleHomePage}>Retour</button>
-        </div> 
-
-        <div className='row'>
-           {this.state.opponents.map((opponent) => (
-              <div className='col-2'>
-
-                
-                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.state.opponents}/>
-
-                <h2 className='text-center'>{opponent.name}</h2>
-                
-              </div>
-            ))}
-        </div>
-      
-        <div>
           <h4 className='text-center'>Choix de votre adversaire</h4> 
           <p className='text-center'>Choississez l'adversaire que vous souhaiez affronter. Ne vous trompez pas, un seul d'entre vous deux ressortira vainqueur!</p>
         </div> 
+        
+        <div>
+          <button onClick={this.props.handleHomePage}>Retour</button>
+        </div> 
 
+    
+
+        {/* <div>
+          <button onClick={this.props.handleOponnentClick}>BOUTTON TEST</button>
+        </div>  */}
+
+        <div className='row'>
+            {this.state.opponents.map((opponent) => (
+              <a href='' onClick={this.handleCharacterChosen} key={opponent.name} className='col-2'>
+                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.props.handleOponnentClick}/>
+                <h2 className='text-center'>{opponent.name}</h2>            
+              </a>
+            ))}
+          </div>    
       </div>
 		)
 	}
 }
 
 export default Players
+
+
+        {/* <div className='row'>
+           {this.state.opponents.map((opponent) => (
+              <a href='' onClick={this.handleCharacterChosen} className='col-2'>
+                <img className='img-fluid mx-20' src={opponent.image} alt="Opponent picture" onClick={this.props.handleOponnentClick}/>
+                <h2 className='text-center'>{opponent.name}</h2>            
+              </a>
+            ))}
+        </div> */}
