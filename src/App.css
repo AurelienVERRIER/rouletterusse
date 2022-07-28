@@ -119,3 +119,16 @@ button:hover {
   background-size: cover;
   height: 100vh;
 }
+
+/* GameOver */
+
+.dead {
+  font-size: 4em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gameOver {
+  background-color: black;
+}
