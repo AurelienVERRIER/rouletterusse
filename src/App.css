@@ -113,11 +113,28 @@ button:hover {
   background-color: rgb(230, 221, 221);
 }
 
+
+/* Fight */
+
 .fightPage {
   background-image: url(../images/fight-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+.opponentImage{
+  width:300px;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+}
+
+.shoot{
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  color: red;
 }
 
 /* GameOver */
@@ -127,6 +144,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  width:100%;
 }
 
 .gameOver {
