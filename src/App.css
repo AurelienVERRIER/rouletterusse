@@ -65,6 +65,8 @@ button:hover {
 
 .gameRules {
   background-color: beige;
+  width:100%;
+  height:100%;
 }
 
 .dead {
@@ -91,12 +93,12 @@ button:hover {
 
 .opponentsPicture {
   width: 100%;
-  height: 90%;
+  height: 80%;
   background-color: none;
 }
 
-.opponentsName {
-  font-size: medium;
+.opponentsName{
+  font-size: 70%;
 }
 
 .opponentsMenu {
@@ -118,6 +120,14 @@ button:hover {
   height: all;
   background-color: rgb(230, 221, 221);
 }
+
+.choice-text{
+  padding:8px;
+}
+.choice-title{
+  padding:8px;
+}
+
 
 /* Fight */
 
