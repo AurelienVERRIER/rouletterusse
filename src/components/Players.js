@@ -1,7 +1,7 @@
 import React from 'react'
 import bowser from '../img/bowser.jpg'
-import barbenoire from '../img/barbenoire.jpg'
-import bender from '../img/bender.png'
+import barbenoire from '../img/barbenoire.webp'
+import bender from '../img/bendergun.png'
 import corona from '../img/corona.png'
 import kim from '../img/kim.png'
 import papanoel from '../img/papanoel.png'
@@ -29,40 +29,33 @@ class Players extends React.Component {
     }
   }
 
-  handleCharacterChosen = () => {
-    ;<p1>Test</p1>
-  }
-
   render() {
     return (
       <div className="opponentSelection">
-        <div>
-          <button onClick={() => this.props.handleStepChange('home')}>
-            Retour
-          </button>
+        <div className="opponentsMenu">
+          <h4 className="text-left">Choix de votre adversaire</h4>
+
+          <p className="text-left">
+            Choississez l'adversaire que vous souhaiez affronter. Ne vous
+            trompez pas, un seul d'entre vous deux ressortira vainqueur!
+          </p>
+
+          <button onClick={() => this.props.handleStepChange('home')}>X</button>
         </div>
 
         <div className="row">
           {this.state.opponents.map((opponent) => (
-            <div className="col-2">
+            <div className="col-2 characterSelection">
               <img
-                className="img-fluid mx-20"
+                className="img-fluid mx-20 opponentsPicture"
                 src={opponent.image}
                 alt="Opponent picture"
                 onClick={() => this.props.handleOpponentClick(opponent)}
               />
 
-              <h2 className="text-center">{opponent.name}</h2>
+              <h2 className="text-center opponentsName">{opponent.name}</h2>
             </div>
           ))}
-        </div>
-
-        <div>
-          <h4 className="text-center">Choix de votre adversaire</h4>
-          <p className="text-center">
-            Choississez l'adversaire que vous souhaiez affronter. Ne vous
-            trompez pas, un seul d'entre vous deux ressortira vainqueur!
-          </p>
         </div>
       </div>
     )

@@ -98,13 +98,13 @@ class App extends React.Component {
         )}
         {this.state.step === 'fight' && (
           <div>
-            <Fight opponent={this.state.opponent} />
-            <button
+             <button
               className="shoot"
-              onClick={() => this.handleShootClick(this.state.randomBullet)}
-            >
-              Tirer !
+              onClick={() => this.handleShootClick(this.state.randomBullet)}>
+              Tirez !
             </button>
+            <Fight opponent={this.state.opponent} />
+           
           </div>
         )}
         {this.state.step === 'gameOver' && (

@@ -6,12 +6,12 @@ class GameOver extends React.Component {
     return (
       <div className="gameOver">
         <img
-          className="GameOverImg position-absolute top-50 start-50 translate-middle"
+          className="GameOverImg position-absolute top-50 start-50 translate-middle bg-dark"
           src={blood}
           alt="blood"
         />
-        <h2 className="dead fs-1 text-center position-absolute top-50 start-50 translate-middle text-white">
-          T'ES MORT
+        <h2 className="dead text-center position-absolute top-50 start-50 translate-middle text-white">
+          T'ES MORT!
         </h2>
       </div>
     )
