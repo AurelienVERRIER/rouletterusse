@@ -5,6 +5,8 @@ import Players from './components/Players'
 import Homepage from './components/Homepage'
 import GameOver from './components/GameOver'
 import Fight from './components/Fight'
+import PlayerTurn from './components/PlayerTurn'
+import GameOverOpponent from './components/GameOverOpponent'
 
 class App extends React.Component {
   constructor() {
@@ -14,6 +16,7 @@ class App extends React.Component {
     const min = 1
 
     this.state = {
+      characterTurn: Math.floor(Math.random() * max) - min,
       display: 'noRules',
       step: 'home',
       opponent: 'noOpponent',
@@ -38,15 +41,27 @@ class App extends React.Component {
   }
 
   handleShootClick = () => {
-    if (this.state.randomBullet !== this.state.number) {
-      this.state.randomBullet += 1
-      if (this.state.randomBullet === 6) {
-        this.state.randomBullet = 1
+    if (this.state.characterTurn % 2 === 0) {
+      this.setState({ step: 'playerTurn' })
+      if (this.state.randomBullet !== this.state.number) {
+        this.state.randomBullet += 1
+
+        if (this.state.randomBullet === 6) {
+          this.state.randomBullet = 1
+        }
+      } else {
+        this.setState({ step: 'gameOver' })
       }
-      console.log(this.state.randomBullet, this.state.number)
-    } else {
-      console.log("t'es mort")
-      this.setState({ step: 'gameOver' })
+    }
+    if (this.state.characterTurn % 2 === 1) {
+      this.setState({ step: 'fight' })
+      if (this.state.randomBullet !== this.state.number) {
+        this.state.randomBullet += 1
+
+        if (this.state.randomBullet === 6) {
+          this.state.randomBullet = 1
+        }
+      } else this.setState({ step: 'opponentDead' })
     }
   }
 
@@ -95,6 +110,24 @@ class App extends React.Component {
         {this.state.step === 'gameOver' && (
           <div>
             <GameOver />
+          </div>
+        )}
+
+        {this.state.step === 'playerTurn' && (
+          <div>
+            <PlayerTurn opponent={this.state.opponent} />
+            <button
+              className="shoot"
+              onClick={() => this.handleShootClick(this.state.randomBullet)}
+            >
+              Tirer !
+            </button>
+          </div>
+        )}
+
+        {this.state.step === 'opponentDead' && (
+          <div>
+            <GameOverOpponent />
           </div>
         )}
       </div>

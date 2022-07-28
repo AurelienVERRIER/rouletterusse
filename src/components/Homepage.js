@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react'
 
 class Homepage extends React.Component {
   constructor() {
-    super();
- 
+    super()
+
     this.state = {
       play: false,
     }
   }
-  
+
   handlePlayClick = () => {
-    this.setState({play: true})
+    this.setState({ play: true })
   }
 
   render() {
@@ -18,17 +18,12 @@ class Homepage extends React.Component {
       <>
         <div>
           <ul className="choices">
-            {/* <button>Jouer</button> */}
-
-            <button onClick={this.props.handlePlayClick} >Jouer</button>
-            
-            {/* <button onClick={this.props.handleBallsClick} >Balles</button>
-            <button onClick={this.props.handleVersusClick} >Nombre de joueurs</button> */}
+            <button onClick={this.props.handlePlayClick}>Jouer</button>
           </ul>
         </div>
       </>
-    );
+    )
   }
 }
 
-export default Homepage;
+export default Homepage

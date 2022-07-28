@@ -29,11 +29,9 @@ class Players extends React.Component {
     }
   }
 
-
   render() {
     return (
       <div className="opponentSelection">
- 
         <div className="opponentsMenu">
                    
           <h4 className="text-left choice-title">Choix de votre adversaire</h4>
@@ -43,10 +41,7 @@ class Players extends React.Component {
             trompez pas, un seul d'entre vous deux ressortira vainqueur!
           </p>
 
-          <button onClick={() => this.props.handleStepChange('home')}>
-            X
-          </button>          
-          
+          <button onClick={() => this.props.handleStepChange('home')}>X</button>
         </div>
 
         <div className="row">
@@ -63,8 +58,6 @@ class Players extends React.Component {
             </div>
           ))}
         </div>
-
-      
       </div>
     )
   }
