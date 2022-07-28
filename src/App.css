@@ -42,12 +42,18 @@ button:hover {
   gap: 20px;
 }
 
+.btn {
+  font-size: 40px;
+  margin-top: 90px;
+  margin-right: 100px;
+}
+
 /* rules */
 .rules {
   display: flex;
   justify-content: flex-end;
   margin-right: 40px;
-  margin-top: 200px;
+  margin-top: 250px;
 }
 
 .rules button {
@@ -154,4 +160,8 @@ button:hover {
 
 .gameOver {
   background-color: black;
+}
+
+.rater {
+  background-color: #041933;
 }

@@ -18,7 +18,12 @@ class Homepage extends React.Component {
       <>
         <div>
           <ul className="choices">
-            <button onClick={this.props.handlePlayClick}>Jouer</button>
+            <button
+              className="btn btn-danger"
+              onClick={this.props.handlePlayClick}
+            >
+              Jouer
+            </button>
           </ul>
         </div>
       </>

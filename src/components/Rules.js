@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 class Rules extends React.Component {
   render() {
@@ -19,8 +19,8 @@ class Rules extends React.Component {
           le revolver sur sa tempe avant d'actionner la détente.
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default Rules;
+export default Rules

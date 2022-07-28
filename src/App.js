@@ -98,13 +98,10 @@ class App extends React.Component {
         )}
         {this.state.step === 'fight' && (
           <div>
-             <button
-              className="shoot"
-              onClick={() => this.handleShootClick(this.state.randomBullet)}>
+            <button className="shoot" onClick={() => this.handleShootClick()}>
               Tirez !
             </button>
             <Fight opponent={this.state.opponent} />
-           
           </div>
         )}
         {this.state.step === 'gameOver' && (
@@ -116,10 +113,7 @@ class App extends React.Component {
         {this.state.step === 'playerTurn' && (
           <div>
             <PlayerTurn opponent={this.state.opponent} />
-            <button
-              className="shoot"
-              onClick={() => this.handleShootClick(this.state.randomBullet)}
-            >
+            <button className="shoot" onClick={() => this.handleShootClick()}>
               Tirer !
             </button>
           </div>
