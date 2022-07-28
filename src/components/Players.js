@@ -19,7 +19,7 @@ class Players extends React.Component {
         { name: 'Bender', image: bender },
         { name: 'Barbe Noire', image: barbenoire },
         { name: 'Corona Virus', image: corona },
-        { name: 'Kim Jun Un', image: kim },
+        { name: 'Kim Jong Un', image: kim },
         { name: 'Papa Noël', image: papanoel },
         { name: 'Vladimir Poutine', image: poutine },
         { name: "Ronald Mac Donald's", image: ronald },
@@ -36,9 +36,9 @@ class Players extends React.Component {
  
         <div className="opponentsMenu">
                    
-          <h4 className="text-left">Choix de votre adversaire</h4>
+          <h4 className="text-left choice-title">Choix de votre adversaire</h4>
 
-          <p className="text-left">
+          <p className="text-left choice-text">
             Choississez l'adversaire que vous souhaiez affronter. Ne vous
             trompez pas, un seul d'entre vous deux ressortira vainqueur!
           </p>
