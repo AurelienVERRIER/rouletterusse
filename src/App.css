@@ -65,8 +65,8 @@ button:hover {
 
 .gameRules {
   background-color: beige;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dead {
@@ -97,7 +97,7 @@ button:hover {
   background-color: none;
 }
 
-.opponentsName{
+.opponentsName {
   font-size: 70%;
 }
 
@@ -121,13 +121,12 @@ button:hover {
   background-color: rgb(230, 221, 221);
 }
 
-.choice-text{
-  padding:8px;
+.choice-text {
+  padding: 8px;
 }
-.choice-title{
-  padding:8px;
+.choice-title {
+  padding: 8px;
 }
-
 
 /* Fight */
 
@@ -172,6 +171,8 @@ button:hover {
   background-color: black;
 }
 
-.rater {
-  background-color: #041933;
+.rate {
+  color: black;
+  font-size: 50px;
+  text-align: center;
 }
