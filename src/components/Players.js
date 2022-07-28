@@ -1,14 +1,14 @@
 import React from 'react'
 import bowser from '../img/bowser.jpg'
 import barbenoire from '../img/barbenoire.jpg'
-import bender from '../img/bender.jpg'
-import corona from '../img/corona.jpg'
-import kim from '../img/kim.jpg'
+import bender from '../img/bender.png'
+import corona from '../img/corona.png'
+import kim from '../img/kim.png'
 import papanoel from '../img/papanoel.png'
-import poutine from '../img/poutine.jpg'
+import poutine from '../img/poutine.png'
 import ronald from '../img/ronald.png'
-import satan from '../img/satan.jpg'
-import trump from '../img/trump.jpg'
+import satan from '../img/satan.png'
+import trump from '../img/trump.png'
 
 class Players extends React.Component {
   constructor() {

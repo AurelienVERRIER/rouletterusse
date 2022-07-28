@@ -28,6 +28,6 @@ B-i/ Déroulement d'une partie
 
 C/ état final minimum souhaité
 
-C-i/ Fonctionnalités minimum : - Choix du personnage - Choix du tireur - Tir aléatoire - Fin de partie (abandon ou mort d'un joueur) - Recommencer la boucle au bout de 5 tirs infructueux - Animations (tir, mort, échappatoire, choix du 1er tireur, fin de partie)
+C-i/ Fonctionnalités minimum : - Choix du personnage - Tir aléatoire - Fin de partie - animation de l'échec
 
 C-ii/ Fonctionnalités bonus - Plus de 2 joueurs - Bonus dans les tirs (exemple : une balle supplémentaire) - Esquive possible des tirs réels (animation tir dure +/- longtemps et plage pour réagir au moment du tir) - Animations supplémentaires

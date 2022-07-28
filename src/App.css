@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 /* font-family: 'Courier Prime', monospace; */
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 /* font-family: 'Bungee Shade', cursive; */
 
 .homePage {
@@ -18,7 +18,7 @@ h1 {
   justify-content: flex-end;
   margin-right: 40px;
   margin-bottom: 50px;
-  font-family: "Courier Prime", monospace;
+  font-family: 'Courier Prime', monospace;
   font-weight: 700;
 }
 
@@ -27,7 +27,7 @@ button {
   border: none;
   background-color: #041933;
   font-size: 35px;
-  font-family: "Courier Prime", monospace;
+  font-family: 'Courier Prime', monospace;
 }
 
 button:hover {
@@ -74,14 +74,21 @@ button:hover {
   min-width: 50%;
 } */
 
-.opponentSelection{
-  width:all;
+.opponentSelection {
+  width: all;
   height: all;
   background-color: rgb(230, 221, 221);
 }
 
 .fightPage {
   background-image: url(../images/fight-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.playerTurnPage {
+  background-image: url(../images/playerbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
